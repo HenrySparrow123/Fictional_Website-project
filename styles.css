@@ -1,0 +1,344 @@
+/*** BOUTON PERSONNALISE (code pré-fourni) ***/
+
+.myButton {
+	font-family:'Eras';
+	margin:5px 10px 5px 10px;
+	-moz-box-shadow: 0px 10px 9px -7px #404242;
+	-webkit-box-shadow: 0px 10px 9px -7px #404242;
+	box-shadow: 0px 10px 9px -7px #404242;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff5e7e), color-stop(1, #780000));
+	background:-moz-linear-gradient(top, #ff5e7e 5%, #780000 100%);
+	background:-webkit-linear-gradient(top, #ff5e7e 5%, #780000 100%);
+	background:-o-linear-gradient(top, #ff5e7e 5%, #780000 100%);
+	background:-ms-linear-gradient(top, #ff5e7e 5%, #780000 100%);
+	background:linear-gradient(to bottom, #ff5e7e 5%, #780000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5e7e', endColorstr='#780000',GradientType=0);
+	background-color:#ff5e7e;
+	-moz-border-radius:40px;
+	-webkit-border-radius:40px;
+	border-radius:40px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:14px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d484d;
+	}
+	
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #780000), color-stop(1, #ff5e7e));
+	background:-moz-linear-gradient(top, #780000 5%, #ff5e7e 100%);
+	background:-webkit-linear-gradient(top, #780000 5%, #ff5e7e 100%);
+	background:-o-linear-gradient(top, #780000 5%, #ff5e7e 100%);
+	background:-ms-linear-gradient(top, #780000 5%, #ff5e7e 100%);
+	background:linear-gradient(to bottom, #780000 5%, #ff5e7e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#780000', endColorstr='#ff5e7e',GradientType=0);
+	background-color:#780000;
+	}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+	}
+
+
+/*** FONTS ***/
+	
+@font-face {
+	font-family: 'Eras';
+	src: url("/font/ERASLGHT.TTF");        /*définit une écriture personnalisée*/
+}
+
+@font-face {
+	font-family: Calibri;
+	src: url("/font/calibri.ttf");
+}
+
+
+/*** PAGE ENTIERE ***/
+
+#page
+{
+	max-width: 960px;
+	margin:auto;
+}
+
+
+/*** HEADER DE LA PAGE ***/
+
+#titre
+{
+	background-color: #EAE5DF;      /* cet attribut "backround-color" est beaucoup utilisé ici : il permet
+									de définir la couleur de l'arrière plan de la section concernée 
+									(ici : la partie "Titre")*/
+	width: 70%; 
+	height: 175px;
+	display: block;
+	float: left;
+}
+
+#titre > #image {
+	float: left;
+}
+
+.titletext {
+	float: left;
+	font-style: normal;
+	color: #484848;           /*cet attribut, très utile, définit la couleur du texte contenu dans la section*/
+	text-align: center;
+	font-family: Eras;          /* cette commande définit l'écriture utilisée : ici elle est personnalisée, pré-fournie
+								dans le sujet et définie avec le @font-face (cf. ci-dessus) */
+	font-size: 40px;
+	font-style: italic;
+}
+
+
+
+/*** AUTHENTIFICATION ***/
+
+#authentification
+{
+	background-color: #8A5D1D;
+	width: 30%;									/*définit la largeur de la section */
+	height: 175px;								/*définit la hauteur de la section */
+	display: block;
+	float: left;
+	text-align: center;							/*centre les éléments de la section afin d'avoir une présentation plus propre*/
+	color: white;
+}
+
+
+
+/*** PIED DE PAGE ***/
+
+#pied_de_page
+{
+	background-color: #8A5D1D;
+	width: 100%;
+	height: 50px;
+	display: block;
+	clear: both;
+	color: #f1ecec;
+	text-align: center;
+}
+
+
+
+/*** PANIER ***/
+
+#panier
+{
+	background-color: #861825;
+	width: 30%;
+	height: 500px;
+	display: block;
+	float: left;
+	overflow: auto;            /*cette commande est très importante : dans les cas où il y a un nombre important
+								d'articles, la zone "Contenu" peut devenir trop petite pour tout stocker proprement.
+								Ainsi, cette commande permet ceci en ajoutant un curseur déroulant que nous pouvons monter
+								ou descendre en cas de saturation*/
+	font-family: Calibri;
+	color: #ffffff;
+	margin: 0%;          /* ceci permet de définir à quel point les autres divs entourant le div courant peuvent se rapprocher : 
+						en mettant 0% nous donnons l'authorisation aux divs de se coller donc*/
+}
+
+#panier > #panierheader{
+	justify-content: baseline;
+	height: 35px;
+	width: 100%;
+	padding-top: 20px;
+	margin: 0%;
+}
+
+#panier > #panierheader > #titrepanier 
+{
+	font-family: Calibri;
+	font-weight:bold;
+	text-align:center;
+	margin: 0%;
+	padding: 0%;        /* le "padding" definit à quel point les objets contenus à l'intérieur du div peuvent se rapprocher
+						des bords du div (c'est relativement similaire à "margin" mais dans un contexte interne */
+	bottom: 0%;
+	align-items: baseline;
+}
+
+#panier > #panierobjets
+{
+	border-top-color: #ffffff;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: double;
+	padding: 0%;
+}
+
+#panier > #paniertotal > p 
+{
+	padding: 0px;
+	margin: 0%;
+	font-family: Calibri;
+	font-weight:bold;
+}
+
+#panier > #paniertotal > #boutons{
+	text-align: center;
+}
+
+#panier > #paniertotal > #vide{
+	padding-top: 20px;
+	float: left;
+	font-weight: bold;
+}
+
+
+/*** CONTENU ***/
+
+#contenu
+{
+	background-color: #EAE5DF;
+	width: 70%;
+	height: 500px;
+	display: block;
+	float: left;
+	overflow: auto;
+}
+
+.affichage_articles {
+	background-color: #ffffff;
+	float: left;
+	height: fit-content; 
+	width: 310px;
+	font-family: Calibri;
+	font-weight: 500;
+	margin: 1%;
+	outline:1.5px solid black;        /*définit la couleur du bord du div */
+	overflow: auto;
+}
+
+.affichage_familles {
+	background-color: #ffffff;
+	float: left;
+	height: fit-content; 
+	width: 120px;
+	font-family: Calibri;
+	margin: 3%;
+	outline:1.5px solid black;
+	overflow: auto;
+}
+
+.affichage_libelle
+{
+	color: #717171;
+	padding: 1%;
+	font-family: Calibri;
+	font-weight: bold;
+	margin: 0%;
+	padding: 0%;
+}
+
+.affichage_libelle > p
+{
+	margin: 2px;
+	padding: 0%;
+}
+
+.affichage_quantite
+{
+	color: #ffffff;
+	padding: 1%;
+	font-family: Calibri;
+	font-weight: bold;
+}
+
+
+/*** MEDIA SCREEN (gestion d'affichage pour tablettes et smartphones) ***/
+
+
+
+/* les @media screen permettent de définir le comportement de la page en fonction de la taille de la fenêtre*/
+/* ils permettent donc, notamment de définir comment doit se présenter le site lorsque nous sommes sur smartphone ou tablette*/
+
+
+@media screen and (max-width: 576px)
+{
+	div#pied_de_page
+	{
+		display: none;       /*ici, dans le cas où nous sommes sur smartphone, nous décidons de ne même pas afficher
+							la partie "Pied de page"*/
+	}
+	
+	div#titre
+	{
+		clear: both;
+		width: 100%;
+		height: auto;
+	}
+
+	.titletext {
+		font-size: 26px;
+	}
+	
+	div#authentification
+	{
+		clear: both;
+		width: 100%;
+		height: auto;
+		float: inline-start;
+
+	}
+	
+	div#contenu
+	{
+		clear: both;
+		width: 100%;
+		height: auto;
+
+	}
+	
+	div#panier
+	{
+		clear: both;
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width:960px)
+{
+	div#pied_de_page
+	{
+		width: 100%;
+		height: 50px;
+	}
+	
+	div#titre
+	{
+		width: 70%;
+		height: 175px;
+	}
+
+	.titletext {
+		font-size: 26px;
+	}
+	
+	div#authentification
+	{
+		width: 30%;
+		height: 175px;
+	}
+	
+	div#contenu
+	{
+		width: 70%;
+		height: 500px;
+	}
+	
+	div#panier
+	{
+		width: 30%;
+		height: 500px;
+	}
+}
